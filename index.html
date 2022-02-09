@@ -1,1 +1,185 @@
-<h1 id="title"> Tell me About Music</h1>
+<html lang="en">
+  <head>
+    <style>
+
+      body {
+        background-color: #FFA64C;
+      }
+
+      header{
+        font-family: helvetica;
+        font-size: 34px;
+        text-align: center;
+        color: #5C1D6B;
+        text-shadow: 1px 1px #000;
+        padding-top: .2rem;
+      }
+
+      form {
+        font-family: Garamond;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin: 0px 0px 0px;
+        padding: 1rem;
+        border-radius: 35px;
+      }
+
+      .info {
+        background-color: #38A6F3;
+        padding-top: 0px;
+        padding-bottom: 20px;
+      }
+
+      .questions {
+        background-color: #B41EB2;
+        padding-top: 5px;
+        padding-bottom: 20px;
+      }
+
+      .final-thoughts {
+        background-color: #FF3179;
+      }
+
+      label {
+        font-size: 1.8rem;
+        justify-content: center;
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 10px;
+      }
+
+      .input, .drop, .submit {
+        width: 25%;
+        height: 2rem;
+      }
+
+      .input-radio,
+      .input-checkbox {
+        display: inline-block;
+        margin-left: 2.1rem;
+        margin-right: .8rem;
+        min-height: 1.2rem;
+        min-width: 1.2rem;
+      }
+
+      .input-radio,
+      .input-checkbox:hover {
+        cursor: pointer;
+      }
+
+      span, .highlight, .info-text {
+        text-shadow: 1px 1px #000;
+      }
+
+      span, .highlight {
+        color: white;
+      }
+
+      .info-text {
+        color: gold;
+      }
+
+      textarea {
+        width: 50%;
+        height: 25%;
+      }
+
+      .submit {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 20px 0px 20px 0px;
+        background-color: #FFFE6E;
+        cursor: pointer;
+        border-style: outset;
+      }
+
+      .submit:hover {
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        border-color: white;
+        border-style: dashed;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+
+    <header>
+      <h1 id="title">Lets Talk Music</h1>
+      <p id="description">
+        Let us know what you like!
+      </p>
+    </header>
+
+    <form id="survey-form">
+
+      <div class="info">
+        <label class="info-text" id="name-label">Name:</label>
+        <input id="name" class="input" type="name" name="name" required placeholder="Who are you?"><br>
+
+        <label class="info-text" id="email-label">Email:</label>
+        <input id="email" class="input" type="email" name="email" required placeholder="How can we contact you?"><br>
+
+        <label class="info-text" id="number-label">Concerts attended per year: </label>
+        <input id="number" class="input" type="number" name="number" min="0" max="365" required placeholder="Total concerts per year?"><br>
+      </div>
+
+
+      <div class="questions">
+        <label class="highlight">
+          If you listened to 1 style the rest of your life, which would it be?
+        </label>
+
+          <select class="drop" id="dropdown" name="style">
+            <option disabled selected value>Select your favorite style of music</option>
+            <option value="country">Country</option>
+            <option value="electronic">Electronic</option>
+            <option value="jazz">Jazz</option>
+            <option value="latin">Latin</option>
+            <option value="metal">Metal</option>
+            <option value="orchestral">Orchestral</option>
+            <option value="pop">Pop</option>
+            <option value="rap">Rap</option>
+            <option value="reggae">Reggae</option>
+            <option value="rock">Rock</option>
+          </select>
+
+
+        <label class="highlight">
+          How do you describe yourself?
+        </label>
+
+          <input class="input-radio" type="radio" name="type" value="casual-listener"/><span>Casual Listener</span>
+          <input class="input-radio" type="radio" name="type" value="music-enthusiast"/><span>Music Enthusiast</span>
+          <input class="input-radio" type="radio" name="type" value="instrument-dabbler"/><span>Instrument Dabbler</span>
+          <input class="input-radio" type="radio" name="type" value="pro-musician"/><span>Professional Musician</span>
+          <br>
+
+
+        <label class="highlight">
+          Where do you listen to music the most?
+        </label>
+
+          <input class="input-checkbox" type="checkbox" name="headphones" value="headphones" for="headphones"/><span>Headphones</span>
+          <input class="input-checkbox" type="checkbox" name="home-speakers" value="speakers" for="speakers"/><span>Home Speakers</span>
+          <input class="input-checkbox" type="checkbox" name="in-car" value="car" for="car"/><span>In The Car</span>
+      </div>
+
+      <div class="final-thoughts">
+        <label>
+          Your thoughts:
+        </label>
+
+          <textarea placeholder="Additional Comments"></textarea><br>
+
+          <input class="submit" id="submit" type="submit">
+      </div>
+    </form>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
