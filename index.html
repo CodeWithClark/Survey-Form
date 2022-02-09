@@ -25,6 +25,10 @@
         border-radius: 35px;
       }
 
+      input, option {
+        text-align: center;
+      }
+
       .info {
         background-color: #38A6F3;
         padding-top: 0px;
@@ -80,9 +84,15 @@
         color: gold;
       }
 
+      .final-thoughts {
+        padding-top: 20px;
+      }
+
       textarea {
+        margin-top: 10px;
         width: 50%;
         height: 25%;
+        border: solid 2px
       }
 
       .submit {
@@ -95,11 +105,22 @@
       }
 
       .submit:hover {
-        background-color: black;
-        color: white;
-        font-weight: 700;
-        border-color: white;
-        border-style: dashed;
+        transition: .5s;
+        font-weight: bold;
+        border-color: #333;
+        border-style: inset;
+      }
+
+      .box {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+        height: 2rem;
+        padding: 10px;
+        border: solid 2px;
+        border-color: black;
+        background-color: white;
       }
 
     </style>
@@ -170,7 +191,7 @@
       </div>
 
       <div class="final-thoughts">
-        <label>
+        <label class="box">
           Your thoughts:
         </label>
 
